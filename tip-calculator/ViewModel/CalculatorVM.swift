@@ -10,8 +10,9 @@ import Combine
 
 class CalculatorVM {
     
+    private var cancellables = Set<AnyCancellable>()
+    
     struct Input {
-        
         /// Never: no failure
         let billPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
@@ -23,6 +24,11 @@ class CalculatorVM {
     }
     
     func transform(input: Input) -> Output {
+
+        input.tipPublisher.sink { tip in
+            print(tip)
+        }.store(in: &cancellables)
+        
         let result = Result(
             amountPerPerson: 500,
             totalBill: 1000,
