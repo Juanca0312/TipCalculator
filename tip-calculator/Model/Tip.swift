@@ -10,7 +10,7 @@ import Foundation
 enum Tip {
     case none
     case tenPercent
-    case fiftenPercent
+    case fifteenPercent
     case twentyPercent
     case custom(value: Int)
     
@@ -20,7 +20,7 @@ enum Tip {
             return ""
         case .tenPercent:
             return "10%"
-        case .fiftenPercent:
+        case .fifteenPercent:
             return "15%"
         case .twentyPercent:
             return "20%"
