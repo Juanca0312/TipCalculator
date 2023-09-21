@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class SplitInputView: UIView {
     
@@ -20,7 +22,10 @@ class SplitInputView: UIView {
         let button = buildButton(
             text: "-",
             corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
-        
+        button.tapPublisher.flatMap {[unowned self] _ in
+            Just(splitSubject.value == 1 ? 1: splitSubject.value - 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
         return button
     }()
     
@@ -28,7 +33,10 @@ class SplitInputView: UIView {
         let button = buildButton(
             text: "+",
             corners: [.layerMaxXMaxYCorner, .layerMaxXMinYCorner])
-        
+        button.tapPublisher.flatMap {[unowned self] _ in
+            Just(splitSubject.value + 1)
+        }.assign(to: \.value, on: splitSubject)
+            .store(in: &cancellables)
         return button
     }()
     
@@ -36,6 +44,7 @@ class SplitInputView: UIView {
         let label = LabelFactory.build(
             text: "1",
             font: ThemeFont.bold(ofSize: 20))
+        label.backgroundColor = .white
         return label
     }()
     
@@ -51,9 +60,17 @@ class SplitInputView: UIView {
         return stackView
     }()
     
+    private let splitSubject: CurrentValueSubject<Int, Never> = .init(1)
+    var valuePublisher: AnyPublisher<Int, Never> {
+        return splitSubject.removeDuplicates().eraseToAnyPublisher()
+    }
+    
+    private var cancellables = Set<AnyCancellable>()
+    
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -79,6 +96,12 @@ class SplitInputView: UIView {
             make.trailing.equalTo(stackView.snp.leading).offset(-24)
             make.width.equalTo(68)
         }
+    }
+    
+    private func observe() {
+        splitSubject.sink {[unowned self] quantity in
+            quantityLabel.text = String(quantity)
+        }.store(in: &cancellables)
     }
     
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
