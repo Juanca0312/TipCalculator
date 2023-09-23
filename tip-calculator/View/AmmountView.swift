@@ -60,9 +60,9 @@ class AmmountView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(text: String) {
+    func configure(ammount: Double) {
         let text = NSMutableAttributedString(
-            string: text,
+            string: ammount.currencyFormatted,
             attributes: [.font: ThemeFont.bold(ofSize: 24)])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 16)], range: NSMakeRange(0, 1))
         ammountLabel.attributedText = text
