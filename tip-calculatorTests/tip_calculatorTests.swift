@@ -15,11 +15,12 @@ final class tip_calculatorTests: XCTestCase {
     private var sut: CalculatorVM!
     private var cancellables: Set<AnyCancellable>!
     
-    private let logoViewTapSubject = PassthroughSubject<Void, Never>()
+    private var logoViewTapSubject: PassthroughSubject<Void, Never>!
     private var audioPlayerService: MockAudioPlayerService!
     
     override func setUp() {
         audioPlayerService = .init()
+        logoViewTapSubject = .init()
         //sut = .init(audioPlayerService: audioPlayerService)
         sut = .init()
         cancellables = .init()
@@ -30,6 +31,8 @@ final class tip_calculatorTests: XCTestCase {
         super.tearDown()
         sut = nil
         cancellables = nil
+        audioPlayerService = nil
+        logoViewTapSubject = nil
     }
     
     func testResultWithoutTipFor1Person() {
@@ -123,17 +126,17 @@ final class tip_calculatorTests: XCTestCase {
         wait(for: [expectation1, expectation2], timeout: 1.0)
         
     }
-        
-        
-        private func buildInput(bill: Double, tip: Tip, split: Int) -> CalculatorVM.Input {
-            return .init(
-                billPublisher: Just(bill).eraseToAnyPublisher(),
-                tipPublisher: Just(tip).eraseToAnyPublisher(),
-                splitPublisher: Just(split).eraseToAnyPublisher(),
-                logoViewTapPublisher: logoViewTapSubject.eraseToAnyPublisher())
-        }
-        
+    
+    
+    private func buildInput(bill: Double, tip: Tip, split: Int) -> CalculatorVM.Input {
+        return .init(
+            billPublisher: Just(bill).eraseToAnyPublisher(),
+            tipPublisher: Just(tip).eraseToAnyPublisher(),
+            splitPublisher: Just(split).eraseToAnyPublisher(),
+            logoViewTapPublisher: logoViewTapSubject.eraseToAnyPublisher())
     }
+    
+}
 
 class MockAudioPlayerService: AudioPlayerService {
     
