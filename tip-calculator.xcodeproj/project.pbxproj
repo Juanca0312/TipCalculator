@@ -14,6 +14,9 @@
 		2D462BC52AB95F00004F59FF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D462BC42AB95F00004F59FF /* String+Extension.swift */; };
 		2D462BEB2ABABD93004F59FF /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D462BEA2ABABD93004F59FF /* UIResponder+Extension.swift */; };
 		2D462BED2ABE94A0004F59FF /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D462BEC2ABE94A0004F59FF /* Double+Extension.swift */; };
+		2D4B1CF92ACBC9FB00682459 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B1CF82ACBC9FB00682459 /* ScreenIdentifier.swift */; };
+		2D4B1CFA2ACBC9FB00682459 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B1CF82ACBC9FB00682459 /* ScreenIdentifier.swift */; };
+		2D4B1CFC2ACBCBCE00682459 /* CalculatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B1CFB2ACBCBCE00682459 /* CalculatorScreen.swift */; };
 		2DD546452AC117E5006980E0 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD546442AC117E5006980E0 /* AudioPlayerService.swift */; };
 		2DD546472AC3E187006980E0 /* tip_calculatorSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD546462AC3E187006980E0 /* tip_calculatorSnapshotTest.swift */; };
 		2DE1FF142AB7C85F0042B0CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FF132AB7C85F0042B0CA /* AppDelegate.swift */; };
@@ -23,7 +26,6 @@
 		2DE1FF202AB7C8600042B0CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE1FF1E2AB7C8600042B0CA /* LaunchScreen.storyboard */; };
 		2DE1FF2B2AB7C8600042B0CA /* tip_calculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FF2A2AB7C8600042B0CA /* tip_calculatorTests.swift */; };
 		2DE1FF352AB7C8600042B0CA /* tip_calculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FF342AB7C8600042B0CA /* tip_calculatorUITests.swift */; };
-		2DE1FF372AB7C8600042B0CA /* tip_calculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1FF362AB7C8600042B0CA /* tip_calculatorUITestsLaunchTests.swift */; };
 		2DE1FF452AB7C97D0042B0CA /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE1FF442AB7C97D0042B0CA /* CombineCocoa */; };
 		2DE1FF482AB7C9B80042B0CA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE1FF472AB7C9B80042B0CA /* SnapKit */; };
 		2DE1FF4B2AB7C9EF0042B0CA /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 2DE1FF4A2AB7C9EF0042B0CA /* CombineCocoa */; };
@@ -67,6 +69,8 @@
 		2D462BC42AB95F00004F59FF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		2D462BEA2ABABD93004F59FF /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		2D462BEC2ABE94A0004F59FF /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		2D4B1CF82ACBC9FB00682459 /* ScreenIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIdentifier.swift; sourceTree = "<group>"; };
+		2D4B1CFB2ACBCBCE00682459 /* CalculatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorScreen.swift; sourceTree = "<group>"; };
 		2DD546442AC117E5006980E0 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		2DD546462AC3E187006980E0 /* tip_calculatorSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorSnapshotTest.swift; sourceTree = "<group>"; };
 		2DE1FF102AB7C85F0042B0CA /* tip-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tip-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +84,6 @@
 		2DE1FF2A2AB7C8600042B0CA /* tip_calculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorTests.swift; sourceTree = "<group>"; };
 		2DE1FF302AB7C8600042B0CA /* tip-calculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "tip-calculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE1FF342AB7C8600042B0CA /* tip_calculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITests.swift; sourceTree = "<group>"; };
-		2DE1FF362AB7C8600042B0CA /* tip_calculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tip_calculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2DE1FF522AB7CF090042B0CA /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		2DE1FF542AB7D0100042B0CA /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		2DE1FF562AB7D0250042B0CA /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 			children = (
 				2D462BBB2AB9558F004F59FF /* Tip.swift */,
 				2D462BC22AB95B4D004F59FF /* Result.swift */,
+				2D4B1CF82ACBC9FB00682459 /* ScreenIdentifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE1FF342AB7C8600042B0CA /* tip_calculatorUITests.swift */,
-				2DE1FF362AB7C8600042B0CA /* tip_calculatorUITestsLaunchTests.swift */,
+				2D4B1CFB2ACBCBCE00682459 /* CalculatorScreen.swift */,
 			);
 			path = "tip-calculatorUITests";
 			sourceTree = "<group>";
@@ -415,6 +419,7 @@
 				2DE1FF532AB7CF090042B0CA /* LogoView.swift in Sources */,
 				2DE1FF5E2AB7D3700042B0CA /* ThemeColor.swift in Sources */,
 				2DE1FF632AB7D3AC0042B0CA /* UIColor+Extension.swift in Sources */,
+				2D4B1CF92ACBC9FB00682459 /* ScreenIdentifier.swift in Sources */,
 				2DE1FF572AB7D0250042B0CA /* BillInputView.swift in Sources */,
 				2DE1FF552AB7D0100042B0CA /* ResultView.swift in Sources */,
 				2DE1FF142AB7C85F0042B0CA /* AppDelegate.swift in Sources */,
@@ -442,8 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE1FF372AB7C8600042B0CA /* tip_calculatorUITestsLaunchTests.swift in Sources */,
+				2D4B1CFA2ACBC9FB00682459 /* ScreenIdentifier.swift in Sources */,
 				2DE1FF352AB7C8600042B0CA /* tip_calculatorUITests.swift in Sources */,
+				2D4B1CFC2ACBCBCE00682459 /* CalculatorScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
